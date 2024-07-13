@@ -1,0 +1,64 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="show-animation">
+<div id="filters" class="top-space sticky-top">
+  <div id="filters-scroll">
+  
+ <% for (tab of tabs) { %>
+ <a href="/listings/show/<%=tab.category%>">
+  <div class="filter">
+    <div><i class="<%=tab.icon%>"></i></div>
+    <p><%=tab.category%></p>
+  </div></a>
+  <% } %>
+ </div>
+  <div class="tax-toggle">
+    <div class="form-check-reverse form-switch form-toggle">
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+  <label class="form-check-label" for="flexSwitchCheckDefault">Display total after taxes</label>
+</div>
+  </div>
+  
+</div>
+ <div class="row" id="index-listing">
+   
+ <% if (session.searchedCategory.category != "Trending") { %>
+ <div id="listing-bar">
+ <h1 class="card-title searched-listing">Listings for <%=session.searchedCategory.category%> ~ </h1>
+ <div class="user-icon-bar">
+   <% if (currentUser) { %>
+ <div class="user-box displayUsername">
+         <b> <%=currentUser.username%></b> </div> <% } %>
+ <h1 class="user-box <%=session.searchedCategory.icon%>"> </h1>
+ </div>
+   </div>
+ <% } else { %>
+  <div id="listing-bar-trending">
+    <div class="text-icon-box">
+ <h1 class="card-title searched-listing"><%=session.searchedCategory.category%></h1><h1 class="user-box <%=session.searchedCategory.icon%>"> </h1>  
+ </div>
+    <% if (currentUser) { %>
+ <div class="user-box displayUsername">
+         <b> <%=currentUser.username%></b> </div>
+    <% } %>
+ </div>
+ <% } %>
+
+  <% for (let list of allListings) { %>
+   
+    <div class="card card-plate do-fade" style="width: 20rem;">
+    <a href="/listings/<%=list._id%>" class="anchor-lists">
+      
+ <img src="<%=list.image.url%>" style="height: 20rem;" class="card-img-top" alt="...">
+
+      <div class="card-body">
+         <h5 class="card-title"><%=list.title%></h5>
+         
+        <p class="card-text price-gst"> &#8377; <%=list.price.toLocaleString("en-IN") %> / night <b><i class="tax-info">
+       ( &#8377; <%=(list.price * 18/100).toLocaleString("en-IN")%> / 18% GST ) </i></b></p>
+      </div> </a>
+    </div>
+ 
+<% } %>
+</div>
+</div>

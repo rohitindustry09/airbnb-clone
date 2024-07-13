@@ -1,0 +1,473 @@
+html {
+  margin: 0px; 
+  padding: 0px; 
+}
+body {
+  background: aliceblue;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.parent {
+  flex: 1;
+}
+.navbar {
+  height: 5rem;
+  background: white;
+  font-size: 1.5rem !important;
+}
+
+.nav-link {
+  color: #222222 !important;
+}
+.fa-regular {
+  color: #fe424d;
+}
+
+/*footer*/
+.footer-base {
+  height: 6rem;
+  background: #e0e0e0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-evenly;
+}
+i {
+  width: 2rem;
+}
+.privacy, .terms {
+  width: 4rem;
+}
+.f-links-social, .Text, .f-link-conditions {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-evenly;
+}
+/*nav baar search*/
+  #search-inp-nav {
+    text-align: center;
+    border-radius: 25px;
+    margin-right: 1rem !important;
+  }
+  #search-btn-nav {
+    background: #fe424d;
+    color: white;
+    border-radius: 25px;
+    padding: 0 1rem 0 1rem;
+  }
+  #search-btn-nav i {
+    display: inline;
+    margin-right: 0.5rem;
+  }
+  #dynamicForm {
+    margin: 0.8rem 0;
+  }
+  #box , .search-box {
+    background: white;
+  }
+  
+/*card*/
+.card-plate {
+  border: 0px none !important;
+  margin-bottom: 2rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.row {
+  padding: 1rem;
+}
+.card-img-top {
+  border-radius: 2rem !important;
+}
+.card-body {
+  padding: 0 !important;
+}
+.card-title {
+  font-size: 1.2rem;
+}
+.anchor-lists {
+  text-decoration: none;
+  color: black;
+}
+.clickable-div {
+  position: absolute;
+  left: 0rem;
+  opacity: 0;
+}
+.clickable-div:hover {
+  opacity: 0.2;
+  background: white;
+}
+.searched-listing {
+  font-size: 2rem !important;
+  margin: 0.5rem 0 0 1rem !important;
+}
+/* new page style*/
+.add-btn {
+  background: #fe424d !important;
+  border: none !important;
+}
+
+/* edit */
+.edit-btn {
+  background: #fe424d !important;
+  border: none !important;
+}
+
+/* show */
+li {
+  list-style: none;
+}
+.edit-delete-btns {
+  display: flex;
+  align-items: center;
+}
+
+/*review*/
+.text-review {
+  font-size: 1.2rem !important;
+}
+.review-box  {
+  display: flex !important;
+  flex-wrap: wrap;
+}
+.review-body {
+  border: 2px solid black;
+}
+
+/*map*/
+#map { height: 400px; }
+.leaflet-control-geocoder.leaflet-control {
+      display: none !important;
+}
+    
+/*filters of options */
+
+  #filters-scroll {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    flex-direction: column;
+    width: 65vw;
+    height: 5rem;
+  }
+  #filters, #filters-scroll {
+    margin-right: 1rem;
+  }
+ 
+ .top-space {
+   transform: translateY(-1.5rem);
+ }
+ 
+  #filters {
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 6rem;
+    width: 100vw;
+    border-bottom: 1px solid #ccc;
+  }
+  .tax-toggle {
+    padding: 1rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    border: 1px solid black;
+  }
+  .filter {
+    text-align: center;
+    margin-right: 1rem;
+    margin-left: 1.5rem;
+    margin-top: 1.3rem;
+    opacity: 0.7;
+  } 
+  .filter:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+  .tax-info {
+    position: absolute;
+    width: 8.5rem;
+    margin-left: 7rem;
+  }
+  .tax-info{
+    left: 5rem;
+    opacity: 0;
+    transition: all 0.5s ease, max-height 0.5s ease;
+  }
+   .tax-info.show {
+     left: 1rem;
+    opacity: 1;
+    max-height: 100px; /* Adjust based on the content height */
+ }
+   
+  .do-fade {
+      opacity: 0;
+      margin-top: 6rem;
+      transition: all 0.5s ease-in-out;
+    }
+  .visible {
+      opacity: 1;
+      margin-top: 1rem;
+    }
+   .hidden {
+     display: none;
+   }
+  
+  #filters-scroll a {
+    text-decoration: none;
+    color: black;
+  }
+  #tabs-options {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .tabs-icon-btn {
+    background: transparent;
+    border: none;
+    margin: 0;
+  }
+  .user-icon-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .displayUsername {
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 25px;
+    align-self: flex-end;
+  }
+  .user-box {
+    margin: 0 1rem;
+  }
+  #listing-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+  }
+ 
+  #listing-bar-trending, .text-icon-box {
+    display: flex;
+    padding: 0 1rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+ 
+ /*cards*/
+ 
+ .recent-text { 
+   display: flex;
+   margin-left: 2rem;
+ }
+
+     .parent-renters {
+      width: 50vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-size: 20px;
+      padding: 0.5rem 1rem;
+    }
+    .customer {
+      border: 1px solid rgb(224,224,224);
+      padding: 1rem;
+      width: 80vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .like-dislike-delete {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem auto;
+    }
+      .like-dislike {
+       display: flex;
+        justify-content: space-between; /* Equal spacing between boxes */
+       y: 1px solid #ccc;
+       height: 3rem;
+       }
+       .box {
+            flex: 1; /* Equal width and flexible */
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            margin: 0 1rem;
+        }
+    .comment, .review {
+      margin-left: 1rem; 
+    }
+    
+    .stars {
+      display: inline-block;
+      margin: 0;
+      position: absolute;
+      left: 5rem;
+      top:;
+    }
+    
+  /*renter*/
+  .no-reviews {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(179,179,179);
+    font-size: 1.5rem;
+  }
+  .float-total {
+     float: right;
+     margin-right: 5.2rem;
+  }
+  .rent-room {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 3rem;
+    font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  }
+  .float-right-want {
+    align-self: flex-start;
+  }
+  .rent-btn-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0rem 2.5rem;
+  }
+  .discount-and-rent {
+    display: flex;
+  }
+  .room-price {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+  } .rent-discount {
+    font-size: 3rem;
+  }
+  .buy-btn {
+  background: #fe424d !important;
+  height: 5rem !important;
+  width: 10rem !important;
+  font-size: 2rem !important;
+  border-top-left-radius: 2rem !important;
+  border-bottom-right-radius: 2rem !important;
+  margin-left: 7rem;
+}
+
+   /*rent.ejs*/
+.place-details-class {
+  border-right: 2px solid rgb(224,224,224) !important;
+  border-left: 2px solid rgb(224,224,224) !important;
+  border-radius: 25px;
+  padding: 2rem;
+  width: 90vw !important;
+}.row-class {
+  display: flex;
+  justify-content: center;
+}
+.details-class {
+  float: right;
+  padding: auto auto;
+  border-bottom: 2px solid rgb(224,224,224);
+}
+.image {
+  width: 50rem;
+  padding: 6rem auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 !important;
+}
+.image-view {
+  border-radius: 20px;
+  width: 40rem;
+  height: 25rem; 
+}
+.detail {
+  margin: 1rem auto;
+}
+.original-price {
+  padding-top: 2rem;
+  font-size: 2rem !important;
+}
+.original-price, .price-after-nights {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+}
+.price-after-nights {
+  font-size: 1.5rem !important;
+}
+.night-select-btn {
+  width: 15vw !important;
+}
+.rent-by-btn {
+  background: #fe424d !important;
+  width: 10vw;
+  border: none !important;
+}
+.map-set {
+  margin: 0 1.5rem 3rem 0 !important;
+  border-radius: 2rem;
+}
+.cancel-btn {
+  font-size: 3rem !important;
+}
+.cancel-anchor, .like-dis {
+  color: black;
+}
+.like-dis {
+  text-decoration: none;
+}
+/*query page*/
+.query-page {
+  font-size: 2rem !important;
+  text-align: center;
+}
+#no, #yes {
+  margin: 2rem;
+}
+
+.booked-night-parent, .new-user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+.new-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+.new-user a {
+  color: red;
+}
+
+.booked-nights-text {
+  font-size: 2rem;
+}
+.login-first {
+  display: inline;
+  align-self: flex-end;
+  font-size: 1.5rem;
+  color: black;
+  font-weight: bold;
+}
+
+#thumbs-up {
+ cursor: pointer;
+}

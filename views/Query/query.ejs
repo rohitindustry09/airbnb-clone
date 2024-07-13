@@ -1,0 +1,18 @@
+<% layout("layouts/boilerplate") %>
+
+<div class="query-page card">
+  
+  <p> Do you want to cancel' Booking ? </p>
+  
+<form class="card-text" method="POST" action="/listings/rent-by/<%=id%>/book-cancel?_method=DELETE">
+  
+  <label for="no">No</label>
+  <input type="radio" id="no" name="cancel" value="0">
+ 
+  <label for="yes">Yes</label>
+  <input type="radio" id="yes" name="cancel" value="1">
+ 
+  <button class="btn btn-dark"> Submit </button>
+ </form>
+ 
+</div>

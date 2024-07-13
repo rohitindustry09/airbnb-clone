@@ -1,0 +1,48 @@
+ <% layout("layouts/boilerplate") %>
+
+  <div class="do-fade row row-class">
+  <div class="col-6 place-details-class card card-plate">
+   <div class="ms-4 details-class card-body">
+      
+      <h2 class="detail card-text"><b>| <%=listing.title%></b></h2>
+      <div class="detail image"> 
+         <img class="image-view" src="<%=listing.image.url%>"/>
+      </div>
+      <div class="detail description"> <%=listing.description%> </div>
+      <div class="detail country"> <%=listing.country%> </div>
+    
+  <div>
+      <h3> • In <%=listing.location%> ~ </h3>
+      <div id="map" class="map-set"></div>
+  </div>
+  
+   </div> 
+   <div class="price-details-class">
+ <form action="/listings/rent-by/<%=listing._id%>/book-now?_method=PUT" method="POST">
+    <div class="original-price">
+     <div class="price"><b>&#8377; <%=Math.floor((listing.price - (listing.price * 5/100))).toLocaleString("en-IN") %>/- </b><sup><strike>&#8377; <%=listing.price.toLocaleString("en-IN")%></strike></sup></div>
+     
+     <select name="nights" id="numberSelect" onchange="displayNumber()" class="night-select-btn form-select form-select-sm" aria-label="Small select example">
+        <option value="1" selected>1 night</option>
+        <option value="2">2 night</option>
+        <option value="3">3 night</option>
+     </select>
+     </div>
+     <div class="price-after-nights">
+      <div class="show-prices">
+        <div id="displayBox"> </div>
+        <div id="total-saves"> </div>
+      </div>
+
+         <button class="btn btn-dark rent-by-btn"> Rent </button>
+       </form>
+
+     </div>
+   </div>
+   
+  </div>
+ </div>
+ <script>
+   let myPlace = "<%=listing.location%>";
+   let actualValue = <%=listing.price%>;
+ </script>
